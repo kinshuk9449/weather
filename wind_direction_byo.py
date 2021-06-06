@@ -34,7 +34,6 @@ volts = {0.4:0.0,
 
 def get_value(length=5):
     data = []
-    #print("Measuring wind direction for %d seconds..."%length)
     start_time = time.time()
     
     while time.time() - start_time <= length:
@@ -42,7 +41,6 @@ def get_value(length=5):
         if not wind in volts:
             print('Unkown value: ' + str(wind))
         else:
-            #print('Known value: ' + str(wind)+ ' '+str(volts[wind]))
             data.append(volts[wind])
             
     return get_average(data)
