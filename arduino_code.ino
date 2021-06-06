@@ -39,14 +39,9 @@ void loop()
      digitalWrite(LED, !digitalRead(HALL_SENSOR));
     
     //Print temp and humidity values to serial monitor
-//    Serial.print("Humidity: /");
     lcd.setCursor(0, 0); 
     lcd.print("Temp:");
     lcd.print(temp);
-//    Serial.print(hum);
-//    Serial.print(" %, Temp: ");
-//    Serial.print(temp);
-//    Serial.println(" Celsius");
     Serial.print(String(temp));
     Serial.print(", ");
     Serial.print(String(hum));
